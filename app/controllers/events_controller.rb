@@ -7,6 +7,7 @@ class EventsController < ApplicationController
    end
 
  def create
+    puts "create method triggered"
    @event = current_user.events.create(event_params)
    redirect_to events_path
  end
@@ -45,7 +46,7 @@ class EventsController < ApplicationController
 
 
  def event_params
-   params.require(:event).permit(:id, :name, :location, :date, :target, :description, :other_sellers, :one_liner)
+   params.require(:event).permit(:id, :name, :location, :date, :target, :description, :other_sellers, :one_liner, :user_id)
  end
 
  def status_params

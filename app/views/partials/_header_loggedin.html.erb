@@ -25,7 +25,7 @@
       Be an Organizer
       <i class="dropdown icon"></i>
       <div class="menu">
-        <%= link_to "create event", new_event_path, class: "item" %>
+        <%= link_to "create event", '/events/new', class: "item" %>
 
         <a class="item" href="/users/<%= current_user.id %>">manage my events</a>
       </div>

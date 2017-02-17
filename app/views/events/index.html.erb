@@ -23,7 +23,7 @@
 
           <div class="extra content">
             <div class="ui two buttons">
-            <%= link_to "View", event, class: "ui basic black button" %>
+            <%= link_to "View", '/event/:id', class: "ui basic black button" %>
             <a href="/users/<%= event.user.id %>" class="ui basic black button">Organizer</a>
             </div>
             <% if current_user and event.user_id == current_user.id %>

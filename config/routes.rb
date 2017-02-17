@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   #       sessions: 'users/sessions'
   #     }
 
+
+
+
+  post '/events/new' => 'events#create'
+
   resources :events
   get 'items/show_by_user/:id' => 'items#show_by_user'
   resources :items

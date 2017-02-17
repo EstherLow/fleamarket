@@ -1,15 +1,14 @@
 <div class="ui grid container">
+
   <div class="left floated sixteen wide column">
-    <%= form_for @event do |t| %>
+    <%= form_for :event, {controllers: 'events', action: 'create'} do |t| %>
     <div class="six wide column">
       <h1>Create New Event</h1>
-
     </div>
 
     <div class="ten wide column">
       <br><br><br>
       <div class="ui equal width form">
-
       <div class="fields">
         <div class="field">
           <%= t.label :name %>
@@ -53,7 +52,7 @@
 
       </div>
     </div><br>
-    
+    <%= t.hidden_field :user_id, :value => current_user.id %>
     <%= t.submit "Create Event", :class => "ui button" %>
   <% end %>
 </div>
